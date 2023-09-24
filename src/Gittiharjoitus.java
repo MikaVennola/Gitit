@@ -35,7 +35,7 @@ public class Gittiharjoitus {
 				int vastaus = Integer.parseInt(in.nextLine());
 				guesses [i] = vastaus;
 			}
-		
+		// Tulostaa käyttäjän arvaukset & oikeat numerot
 		System.out.println("Käyttäjän arvaukset: ");
 		for (int i = 0; i<guesses.length ; i++) {
 		System.out.print(guesses[i] + " ");
