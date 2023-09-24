@@ -12,11 +12,12 @@ public class Gittiharjoitus {
 		int [] guesses = new int [7];
 		int [] rightnumbers = new int [7];
 		int laskuri = 0;
-		// arpoo numerot
+		// Arpoo numerot
 			for (int i = 0 ; i< rightnumbers.length ; i++) {
 			int numerot = random.nextInt(6);
 			System.out.print(numerot + " ");
 			rightnumbers [i] = numerot;
+			
 			try {
 				Thread.sleep(1000);
 			}
@@ -28,13 +29,13 @@ public class Gittiharjoitus {
 			for (int i = 0; i < 20; i++) {
 				System.out.println();
 			}
-			// Käyttäjän vastaukset
+			// Käyttäjän arvaukset
 			for (int i = 0 ; i< guesses.length ; i++) {
 				System.out.println("Syötä " + (i+1) + ". numero");
 				int vastaus = Integer.parseInt(in.nextLine());
 				guesses [i] = vastaus;
 			}
-		// Tulostaa käyttäjän arvaukset & oikeat numerot
+		
 		System.out.println("Käyttäjän arvaukset: ");
 		for (int i = 0; i<guesses.length ; i++) {
 		System.out.print(guesses[i] + " ");
@@ -44,12 +45,12 @@ public class Gittiharjoitus {
 		for (int i = 0; i<rightnumbers.length ; i++) {
 			System.out.print(rightnumbers[i] + " ");
 			}
-		//  laskee oikeat vastaukset
+		
 		for (int i = 0 ; i < guesses.length; i++) {
 		if (rightnumbers[i] == guesses[i]) {
 			laskuri = laskuri + 1;
 		}
-		// tulostaa oikeat vastaukset & laskee prosentit kuinka paljon oikein
+	
 		}
 		float prosentti = (laskuri*100)/guesses.length;
 		System.out.println();
